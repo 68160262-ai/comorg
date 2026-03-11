@@ -1,12 +1,16 @@
 # Chapter 5: Internal Memory
 
 สรุปเนื้อหาโครงสร้างและเทคโนโลยีของหน่วยความจำภายในคอมพิวเตอร์
-1. * [5.1 Semiconductor Main Memory (หน่วยความจำหลักแบบเซมิคอนดักเตอร์)](#51-Semiconductor-Main-Memory-(หน่วยความจำหลักแบบเซมิคอนดักเตอร์))
-2. * [5.2 Error Correction (การแก้ไขข้อผิดพลาด)](#52-Error-Correction-(การแก้ไขข้อผิดพลาด))
-3. * [5.3 DDR DRAM (แรมแบบ DDR)](#53-DDR-DRAM (แรมแบบ DDR))
-4. * [5.4 Flash Memory (หน่วยความจำแฟลช)](#54-Flash-Memory-(หน่วยความจำแฟลช))
-5. * [5.5 Newer Nonvolatile Solid-State Memory Technologies](#55-Newer-Nonvolatile-Solid-State-Memory-Technologies)
-6. * [5.6 Key Terms, Review Questions, and Problems](#56-Key-Terms,-Review-Questions,-and-Problems)
+## สารบัญ (Table of Contents)
+1. [5.1 Semiconductor Main Memory (หน่วยความจำหลักแบบเซมิคอนดักเตอร์)](#5.1-Semiconductor-Main-Memory-(หน่วยความจำหลักแบบเซมิคอนดักเตอร์))
+2. [5.2 Error Correction (การแก้ไขข้อผิดพลาด)](#5.2-Error-Correction-(การแก้ไขข้อผิดพลาด))
+3. [5.3 DDR DRAM (แรมแบบ DDR)](#5.3-DDR-DRAM-(แรมแบบ-DDR))
+4. [5.4 Flash Memory (หน่วยความจำแฟลช)](#5.4-Flash-Memory-(หน่วยความจำแฟลช))
+5. [5.5 Newer Nonvolatile Solid-State Memory Technologies](#5.5-Newer-Nonvolatile-Solid-State-Memory-Technologies)
+6. [5.6 Key Terms, Review Questions, and Problems](#5.6-Key-Terms,-Review-Questions,-and-Problems)
+
+---
+
 ## 5.1 Semiconductor Main Memory (หน่วยความจำหลักแบบเซมิคอนดักเตอร์)
 **Organization (การจัดองค์กร):** * องค์ประกอบพื้นฐานคือ **Memory Cell** ซึ่งมีคุณสมบัติแสดงสถานะเสถียรได้ 2 สถานะ (0 และ 1), สามารถเขียนข้อมูลลงไปได้ และสามารถอ่านข้อมูลออกมาได้
 * **DRAM and SRAM (แรมแบบไดนามิกและสแตติก):**
