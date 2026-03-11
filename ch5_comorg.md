@@ -1,17 +1,15 @@
 # Chapter 5: Internal Memory
 
 สรุปเนื้อหาโครงสร้างและเทคโนโลยีของหน่วยความจำภายในคอมพิวเตอร์
-## สารบัญ (Table of Contents)
-## 📑 สารบัญ (Table of Contents)
-1. [5.1 Semiconductor Main Memory](#sec51)
-2. [5.2 Error Correction](#sec52)
-3. [5.3 DDR DRAM](#sec53)
-4. [5.4 Flash Memory](#sec54)
-5. [5.5 Newer Nonvolatile Solid-State Memory](#sec55)
-6. [5.6 Key Terms, Review Questions, and Problems](#sec56)
-
+## 📑 Table of Contents
+* [5.1 Semiconductor Main Memory](#section51)
+* [5.2 Error Correction](#section52)
+* [5.3 DDR DRAM](#section53)
+* [5.4 Flash Memory](#section54)
+* [5.5 Newer Nonvolatile Solid-State Memory Technologies](#section55)
+* [5.6 Key Terms, Review Questions, and Problems](#section56)
 ---
-
+<a name="section51"></a>
 ## 5.1 Semiconductor Main Memory (หน่วยความจำหลักแบบเซมิคอนดักเตอร์)
 **Organization (การจัดองค์กร):** * องค์ประกอบพื้นฐานคือ **Memory Cell** ซึ่งมีคุณสมบัติแสดงสถานะเสถียรได้ 2 สถานะ (0 และ 1), สามารถเขียนข้อมูลลงไปได้ และสามารถอ่านข้อมูลออกมาได้
 * **DRAM and SRAM (แรมแบบไดนามิกและสแตติก):**
@@ -24,28 +22,33 @@
   * **EEPROM:** ลบและเขียนใหม่ได้ด้วยสัญญาณไฟฟ้าในระดับ Byte 
 * **Chip Logic & Packaging:** การจัดระดับสัญญาณผ่าน Address lines, Data lines และการใช้สัญญาณควบคุมเช่น RAS (Row Address Select) และ CAS (Column Address Select) เพื่อลดจำนวนขา (Pins) ของชิป 
 
+<a name="section52"></a>
 ## 5.2 Error Correction (การแก้ไขข้อผิดพลาด)
 * **ประเภทความเสียหาย:** แบ่งเป็น **Hard Failure** (ความเสียหายถาวรที่ตัวฮาร์ดแวร์) และ **Soft Error** (ความผิดพลาดชั่วคราวจากสัญญาณรบกวน)
 * **Hamming Code:** กลไกการใช้ Check bits เพื่อตรวจจับและแก้ไขข้อผิดพลาด
     * **SEC (Single-Error-Correcting):** แก้ไขข้อผิดพลาดได้ 1 บิต 
     * **SEC-DED:** แก้ไขได้ 1 บิต และตรวจจับได้ว่าผิดพลาด 2 บิต
 
+<a name="section53"></a>
 ## 5.3 DDR DRAM (แรมแบบ DDR)
 * **SDRAM (Synchronous DRAM):** ทำงานสัมพันธ์กับสัญญาณนาฬิกา (Clock) ของระบบ ทำให้ Processor ไม่ต้องรอข้อมูลนานเกินไป
 * **DDR (Double Data Rate):** * เพิ่มความเร็วในการส่งข้อมูลโดยส่งทั้งช่วง **ขาขึ้น (Rising edge)** และ **ขาลง (Falling edge)** ของสัญญาณนาฬิกา
   * มีการพัฒนาตั้งแต่ DDR1 จนถึง DDR4 โดยเพิ่มขนาด **Prefetch Buffer** และลดระดับแรงดันไฟฟ้าลง 
 
+<a name="section54"></a>
 ## 5.4 Flash Memory (หน่วยความจำแฟลช)
 * **คุณสมบัติ:** เป็นหน่วยความจำแบบ Non-volatile (ข้อมูลไม่หายเมื่อไม่มีไฟ) ที่อยู่กึ่งกลางระหว่าง EPROM และ EEPROM ในด้านราคาและการทำงาน 
 * **ประเภทของ Flash:**
     * **NOR Flash:** รองรับการเข้าถึงข้อมูลแบบสุ่ม (Random access) เหมาะสำหรับเก็บ Program Code
     * **NAND Flash:** มีความหนาแน่นข้อมูลสูงกว่า ลบและเขียนเป็นบล็อก (Block-level) เหมาะสำหรับที่เก็บข้อมูลความจุสูง
 
+<a name="section55"></a>
 ## 5.5 Newer Nonvolatile Solid-State Memory Technologies
 เทคโนโลยีใหม่ที่พยายามรวมความเร็วของ RAM และความถาวรของ ROM เข้าด้วยกัน:
 * **STT-RAM (Spin-Transfer Torque RAM):** ใช้ทิศทางการหมุนของอิเล็กตรอนในการเก็บข้อมูล
 * **PCRAM (Phase-Change RAM):** ใช้การเปลี่ยนสถานะของวัสดุระหว่างผลึกและอสัณฐาน
 * **ReRAM (Resistive RAM):** ใช้การเปลี่ยนความต้านทานไฟฟ้าของวัสดุฉนวน 
 
+<a name="section56"></a>
 ## 5.6 Key Terms, Review Questions, and Problems
 * ส่วนสรุปคำศัพท์สำคัญ คำถามทบทวนเนื้อหา และแบบฝึกหัดท้ายบทเพื่อทดสอบความเข้าใจเกี่ยวกับการคำนวณ Check bits และการทำงานของหน่วยความจำ 
