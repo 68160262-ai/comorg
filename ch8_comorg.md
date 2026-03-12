@@ -5,11 +5,11 @@
 ## สารบัญ
 
 1. [Operating System Overview (ภาพรวมระบบปฏิบัติการ)](#1-Operating-System-Overview)
-2. [Scheduling (การจัดตารางงาน)](https://www.google.com/search?q=%232-scheduling)
-3. [Memory Management (การจัดการหน่วยความจำ)](https://www.google.com/search?q=%233-memory-management)
-4. [Intel x86 Memory Management (การจัดการหน่วยความจำ x86)](https://www.google.com/search?q=%234-intel-x86-memory-management)
-5. [ARM Memory Management (การจัดการหน่วยความจำ ARM)](https://www.google.com/search?q=%235-arm-memory-management)
-6. [Key Terms & Summary (คำศัพท์สำคัญและสรุปท้ายบท)](https://www.google.com/search?q=%236-key-terms--summary)
+2. [Scheduling (การจัดตารางงาน)](#2-Scheduling)
+3. [Memory Management (การจัดการหน่วยความจำ)](#3-Memory-Management)
+4. [Intel x86 Memory Management (การจัดการหน่วยความจำ x86)](#4-Intel-x86-Memory-Management)
+5. [ARM Memory Management (การจัดการหน่วยความจำ ARM)](#5-ARM-Memory-Management)
+6. [Key Terms & Summary (คำศัพท์สำคัญและสรุปท้ายบท)](#6-Key-Term-&-Summary)
 
 ---
 
