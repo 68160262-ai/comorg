@@ -1,1 +1,67 @@
-ghghh
+# Chapter 8: Operating System Support (การสนับสนุนของระบบปฏิบัติการ)
+
+เนื้อหาบทนี้เน้นการทำงานของระบบปฏิบัติการ (OS) ในฐานะตัวจัดการทรัพยากรฮาร์ดแวร์ เพื่อสนับสนุนการทำงานของซอฟต์แวร์ประยุกต์
+
+## สารบัญ
+
+1. [Operating System Overview (ภาพรวมระบบปฏิบัติการ)](https://www.google.com/search?q=%231-operating-system-overview)
+2. [Scheduling (การจัดตารางงาน)](https://www.google.com/search?q=%232-scheduling)
+3. [Memory Management (การจัดการหน่วยความจำ)](https://www.google.com/search?q=%233-memory-management)
+4. [Intel x86 Memory Management (การจัดการหน่วยความจำ x86)](https://www.google.com/search?q=%234-intel-x86-memory-management)
+5. [ARM Memory Management (การจัดการหน่วยความจำ ARM)](https://www.google.com/search?q=%235-arm-memory-management)
+6. [Key Terms & Summary (คำศัพท์สำคัญและสรุปท้ายบท)](https://www.google.com/search?q=%236-key-terms--summary)
+
+---
+
+## 1. Operating System Overview
+
+ระบบปฏิบัติการคือโปรแกรมที่ควบคุมการทำงานของคอมพิวเตอร์และจัดสรรทรัพยากร
+
+* **Objectives (วัตถุประสงค์):**
+* **Convenience:** ทำให้ผู้ใช้และโปรแกรมเมอร์ใช้งานเครื่องได้ง่ายขึ้น
+* **Efficiency:** บริหารฮาร์ดแวร์ให้ทำงานอย่างมีประสิทธิภาพสูงสุด
+
+
+* **The OS as a Resource Manager:** OS ทำหน้าที่ควบคุมการเคลื่อนย้าย, การจัดเก็บ และการประมวลผลข้อมูล รวมถึงควบคุมการเข้าถึง I/O และหน่วยความจำ
+* **Types of Operating Systems:** พัฒนาการจากระบบ **Interactive** (โต้ตอบโดยตรง), **Batch** (รวมงานเป็นชุด), จนถึง **Multiprogramming** ซึ่งช่วยให้ CPU ไม่ต้องรอคอยงานจากการทำงานของ I/O นานเกินไป
+
+## 2. Scheduling
+
+เพื่อให้ระบบทำงานได้หลายงานพร้อมกัน OS ต้องมีกลไกการจัดลำดับการใช้ CPU
+
+* **Long-Term Scheduling:** กำหนดว่างาน (Job) ใดจะถูกเปลี่ยนเป็น Process และเข้าสู่คิวหลักของระบบ
+* **Medium-Term Scheduling:** จัดการการ **Swapping** เพื่อนำบางโปรแกรมออกจาก RAM ไปไว้ใน Disk ชั่วคราว เพื่อเพิ่มพื้นที่ให้โปรแกรมอื่น
+* **Short-Term Scheduling (Dispatcher):** ทำหน้าที่เลือก Process จากสถานะ **Ready** เพื่อส่งไปประมวลผลใน CPU จริงๆ เป็นฟังก์ชันที่ทำงานบ่อยที่สุด
+
+## 3. Memory Management
+
+เทคนิคการจัดการหน่วยความจำเพื่อรองรับ Multiprogramming
+
+* **Swapping:** การย้ายโปรแกรมที่ไม่ได้ใช้งานชั่วคราวออกไปยัง Disk เพื่อคืนพื้นที่ให้ RAM
+* **Partitioning:** การแบ่ง RAM เป็นส่วนๆ ทั้งแบบขนาดคงที่ (Fixed) และขนาดแปรผัน (Dynamic) ซึ่งอาจนำไปสู่ปัญหา **Fragmentation** (เศษเสี้ยวหน่วยความจำที่ไม่ได้ใช้งาน)
+* **Paging:** การแบ่งหน่วยความจำเป็นบล็อกเล็กๆ (Frames) และแบ่งโปรแกรมเป็นหน้า (Pages) ทำให้โปรแกรมไม่จำเป็นต้องอยู่ติดกันใน RAM
+* **Virtual Memory:** การใช้งานหน้าโปรแกรมเฉพาะส่วนที่จำเป็น (Demand Paging) ทำให้สามารถรันโปรแกรมที่ใหญ่กว่าขนาด RAM จริงได้
+
+## 4. Intel x86 Memory Management
+
+การจัดการหน่วยความจำบนสถาปัตยกรรม x86 ที่มีความยืดหยุ่นสูง
+
+* **Segmentation:** การแบ่งโปรแกรมตามหน้าที่ (เช่น Code, Data, Stack) เพื่อความปลอดภัยและง่ายต่อการแชร์ทรัพยากร
+* **Paging:** รองรับการทำหน้าได้หลายระดับ (Multilevel Paging) และมีโหมดป้องกัน (Protected Mode) เพื่อไม่ให้โปรแกรมหนึ่งรบกวนหน่วยความจำของอีกโปรแกรมหนึ่ง
+
+## 5. ARM Memory Management
+
+ออกแบบมาสำหรับระบบที่ต้องการประสิทธิภาพและการประหยัดพลังงาน
+
+* **Memory System Organization:** ใช้ระบบตารางการแปลงที่อยู่แบบหลายชั้น (L1 และ L2 Descriptor)
+* **Virtual Memory Address Translation:** รองรับทั้งขนาด **Sections** (1 MB) และ **Pages** (4 KB หรือ 64 KB) เพื่อให้เหมาะสมกับการใช้งานอุปกรณ์เคลื่อนที่หรือระบบฝังตัว
+* **Access Control:** ใช้ Domain ในการควบคุมสิทธิ์การเข้าถึงข้อมูลในแต่ละส่วนของหน่วยความจำ
+
+## 6. Key Terms & Summary
+
+คำศัพท์สำคัญที่ควรทราบจากบทนี้:
+
+* **Process:** โปรแกรมที่กำลังทำงานอยู่ (Program in execution)
+* **Translation Lookaside Buffer (TLB):** แคชพิเศษที่ช่วยลดเวลาการแปลงที่อยู่ของ Virtual Memory
+* **Fragmentation:** พื้นที่ว่างใน RAM ที่ถูกแบ่งจนเล็กเกินไปจนใช้งานไม่ได้
+* **Interrupt:** สัญญาณขัดจังหวะการทำงานเพื่อให้ OS เข้ามาจัดการเหตุการณ์สำคัญ
