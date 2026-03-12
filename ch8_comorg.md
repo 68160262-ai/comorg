@@ -4,7 +4,7 @@
 
 ## สารบัญ
 
-1. [Operating System Overview (ภาพรวมระบบปฏิบัติการ)](https://www.google.com/search?q=%231-operating-system-overview)
+1. [Operating System Overview (ภาพรวมระบบปฏิบัติการ)](#1-Operating-System-Overview)
 2. [Scheduling (การจัดตารางงาน)](https://www.google.com/search?q=%232-scheduling)
 3. [Memory Management (การจัดการหน่วยความจำ)](https://www.google.com/search?q=%233-memory-management)
 4. [Intel x86 Memory Management (การจัดการหน่วยความจำ x86)](https://www.google.com/search?q=%234-intel-x86-memory-management)
